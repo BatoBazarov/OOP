@@ -1,17 +1,23 @@
-class Dog  extends Animal {
-    public String name;
-    public int run;
-    public int swim;
+public class Dog  extends Animal {
+    public Dog(String name) {
+    super(name);
+    }
 
-    public Dog(String name, int run, int swim, ) {
-        this.name = name;
-        this.run = run;
-        this.swim = swim;
+    @Override
+    public void run(int distance) {
+        if (distance < 500) {
+            System.out.println("The dog run");
+        }     else {
+            System.out.println("The dog didn't run");
+        }
     }
-    public void getRun() {
-        System.out.println();
-    }
-    public void getSwim() {
-        System.out.println();
+    @Override
+    public void swim(int distance) {
+        if (distance< 10) {
+            System.out.println("The dog swim");
+        }     else {
+            System.out.println("The dog didn't swim");
+        }
     }
 }
+

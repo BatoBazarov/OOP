@@ -1,25 +1,19 @@
- class Cat extends Animal {
-        public String name;
-        public int run;
-        public int swim;
+ public class Cat extends Animal {
+     public Cat(String name) {
+         super(name);
+     }
 
-        public Cat(String name, int run, int swim, ) {
-                this.name = name;
-                this.run = run;
-                this.swim = swim;
-        }
-
-        public void getRun() {
-                return run();
-                System.out.println("The cat ran");
-        }
-
-        public void getSwim() {
-                return swim;
-                System.out.println("Cat can't swim");
-        }
-
-
+     @Override
+     public void run(int distance) {
+   if (distance < 200) {
+    System.out.println("The cat run");
+}     else {
+    System.out.println("The cat didn't run");
 }
-
+     }
+    @Override
+     public void swim(int distance) {
+         System.out.println ("Cat can't swim");
+    }
+ }
 
